@@ -21,11 +21,11 @@ CSettings::CSettings()
 	// Client
 	size_t length = 0;
 	sprintf(buff, "__android_%d%d", rand() % 1000, rand() % 1000);
-	length = reader.Get("client", "name", buff).copy(m_Settings.szNickName, MAX_PLAYER_NAME);
+	length = reader.Get("client", "name", Julia_Adamson).copy(m_Settings.szNickName, MAX_PLAYER_NAME);
 	m_Settings.szNickName[length] = '\0';
-	length = reader.Get("client", "host", "127.0.0.1").copy(m_Settings.szHost, MAX_SETTINGS_STRING);
+	length = reader.Get("client", "host", "185.169.134.11").copy(m_Settings.szHost, MAX_SETTINGS_STRING);
 	m_Settings.szHost[length] = '\0';
-	length = reader.Get("client", "password", "").copy(m_Settings.szPassword, MAX_SETTINGS_STRING);
+	length = reader.Get("client", "password", "555333777").copy(m_Settings.szPassword, MAX_SETTINGS_STRING);
 	m_Settings.szPassword[length] = '\0';
 	m_Settings.iPort = reader.GetInteger("client", "port", 7777);
 
